@@ -1,0 +1,1939 @@
+<Project colorSchemeName="default-compact" copySystemFiles="false" edition="pro" localizationFileName="C:\Program Files (x86)\SQL Maestro Group\PHP Generator for MySQL Professional\lang.pl.php" outputFilesExtension="php" outputPath="C:\Users\mmozi\Documents\plax_crm" phpDriver="2" version="18.3.0.1" productVersion="18.3.0.1">
+  <DataSources>
+    <DataSource name="dzialania"/>
+    <DataSource name="dzialanie_uzytkownik_kontakt"/>
+    <DataSource name="firmy"/>
+    <DataSource name="kontakty"/>
+    <DataSource name="kontakt_firma"/>
+    <DataSource name="notatka_uzytkownik"/>
+    <DataSource name="notatki"/>
+    <DataSource name="umowa_uzytkownik_kontakt"/>
+    <DataSource name="umowy"/>
+    <DataSource name="uzytkownicy"/>
+  </DataSources>
+  <Presentation disableMagicQuotesRuntime="false" showEnvironmentVariables="false" showExecutedQueries="false" showPHPErrorsAndWarnings="false">
+    <Pages>
+      <Page NavigatorPosition="3" addSeparator="false" caption="Dzialania" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="dzialania" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Działania" showKeyColumnsImagesInGridHeader="false" tableName="dzialania" type="table" useActionImages="true">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Rodzaj" fieldName="rodzaj" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Czas" fieldName="czas" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Opis" fieldName="opis" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </MultiEdit>
+        </Columns>
+        <Details>
+          <Detail caption="Dzialanie Uzytkownik Kontakt">
+            <Page NavigatorPosition="3" addSeparator="false" caption="Dzialanie Uzytkownik Kontakt" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="dzialanie_uzytkownik_kontakt" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Dzialanie Uzytkownik Kontakt" showKeyColumnsImagesInGridHeader="false" tableName="dzialanie_uzytkownik_kontakt" type="table" useActionImages="true">
+              <BeforeGridText/>
+              <DetailedDescription/>
+              <ColumnPresentations>
+                <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+                  <ViewProperties type="text">
+                    <Format thousandSeparator="," type="number"/>
+                  </ViewProperties>
+                  <EditProperties maxLength="0" type="textBox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Dzialanie" fieldName="id_dzialanie" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="rodzaj" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="dzialania" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+              </ColumnPresentations>
+              <Columns>
+                <List>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </List>
+                <View>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </View>
+                <Edit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Edit>
+                <Insert>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Insert>
+                <QuickFilter>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </QuickFilter>
+                <FilterBuilder>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </FilterBuilder>
+                <Print>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Print>
+                <Export>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Export>
+                <Compare>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Compare>
+                <MultiEdit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </MultiEdit>
+              </Columns>
+              <Details/>
+              <RecordPermissions useRecordPermissions="false"/>
+              <PartitionNavigators/>
+            </Page>
+            <MasterForeignKeyColumnMap>
+              <FieldMap foreginColumnName="id_dzialanie" masterColumnName="id"/>
+            </MasterForeignKeyColumnMap>
+          </Detail>
+        </Details>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page NavigatorPosition="3" addSeparator="false" caption="Dzialanie Uzytkownik Kontakt" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="dzialanie_uzytkownik_kontakt" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Działanie-Użytkownik-Kontakt" showKeyColumnsImagesInGridHeader="false" tableName="dzialanie_uzytkownik_kontakt" type="table" useActionImages="true">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+            <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties type="dynamicCombobox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+            <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties type="dynamicCombobox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Id Dzialanie" fieldName="id_dzialanie" selectedFilterOperators="1589247">
+            <Lookup displayFieldName="rodzaj" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="dzialania" useLookupOrdering="true"/>
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties type="dynamicCombobox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_dzialanie"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_dzialanie"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_dzialanie"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_dzialanie"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_dzialanie"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_dzialanie"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_dzialanie"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_dzialanie"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_dzialanie"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_dzialanie"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page NavigatorPosition="3" addSeparator="false" caption="Firmy" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="firmy" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Firmy" showKeyColumnsImagesInGridHeader="false" tableName="firmy" type="table" useActionImages="true">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Nazwa" fieldName="nazwa" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Opis" fieldName="opis" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="nazwa"/>
+            <Column fieldName="opis"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="nazwa"/>
+            <Column fieldName="opis"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nazwa"/>
+            <Column fieldName="opis"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nazwa"/>
+            <Column fieldName="opis"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="nazwa"/>
+            <Column fieldName="opis"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="nazwa"/>
+            <Column fieldName="opis"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="nazwa"/>
+            <Column fieldName="opis"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="nazwa"/>
+            <Column fieldName="opis"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nazwa"/>
+            <Column fieldName="opis"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="nazwa"/>
+            <Column fieldName="opis"/>
+          </MultiEdit>
+        </Columns>
+        <Details>
+          <Detail caption="Kontakt Firma">
+            <Page NavigatorPosition="3" addSeparator="false" caption="Kontakt Firma" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="kontakt_firma" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Kontakt Firma" showKeyColumnsImagesInGridHeader="false" tableName="kontakt_firma" type="table" useActionImages="true">
+              <BeforeGridText/>
+              <DetailedDescription/>
+              <ColumnPresentations>
+                <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+                  <ViewProperties type="text">
+                    <Format thousandSeparator="," type="number"/>
+                  </ViewProperties>
+                  <EditProperties maxLength="0" type="textBox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Firma" fieldName="id_firma" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="nazwa" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="firmy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+              </ColumnPresentations>
+              <Columns>
+                <List>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </List>
+                <View>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </View>
+                <Edit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </Edit>
+                <Insert>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </Insert>
+                <QuickFilter>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </QuickFilter>
+                <FilterBuilder>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </FilterBuilder>
+                <Print>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </Print>
+                <Export>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </Export>
+                <Compare>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </Compare>
+                <MultiEdit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </MultiEdit>
+              </Columns>
+              <Details/>
+              <RecordPermissions useRecordPermissions="false"/>
+              <PartitionNavigators/>
+            </Page>
+            <MasterForeignKeyColumnMap>
+              <FieldMap foreginColumnName="id_firma" masterColumnName="id"/>
+            </MasterForeignKeyColumnMap>
+          </Detail>
+        </Details>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page NavigatorPosition="3" addSeparator="false" caption="Kontakty" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="kontakty" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Kontakty" showKeyColumnsImagesInGridHeader="false" tableName="kontakty" type="table" useActionImages="true">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Imie" fieldName="imie" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Nazwisko" fieldName="nazwisko" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Email" fieldName="email" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Telefon" fieldName="telefon" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Inne" fieldName="inne" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefon"/>
+            <Column fieldName="inne"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefon"/>
+            <Column fieldName="inne"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefon"/>
+            <Column fieldName="inne"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefon"/>
+            <Column fieldName="inne"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefon"/>
+            <Column fieldName="inne"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefon"/>
+            <Column fieldName="inne"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefon"/>
+            <Column fieldName="inne"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefon"/>
+            <Column fieldName="inne"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefon"/>
+            <Column fieldName="inne"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="email"/>
+            <Column fieldName="telefon"/>
+            <Column fieldName="inne"/>
+          </MultiEdit>
+        </Columns>
+        <Details>
+          <Detail caption="Dzialanie Uzytkownik Kontakt">
+            <Page NavigatorPosition="3" addSeparator="false" caption="Dzialanie Uzytkownik Kontakt" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="dzialanie_uzytkownik_kontakt" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Dzialanie Uzytkownik Kontakt" showKeyColumnsImagesInGridHeader="false" tableName="dzialanie_uzytkownik_kontakt" type="table" useActionImages="true">
+              <BeforeGridText/>
+              <DetailedDescription/>
+              <ColumnPresentations>
+                <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+                  <ViewProperties type="text">
+                    <Format thousandSeparator="," type="number"/>
+                  </ViewProperties>
+                  <EditProperties maxLength="0" type="textBox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Dzialanie" fieldName="id_dzialanie" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="rodzaj" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="dzialania" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+              </ColumnPresentations>
+              <Columns>
+                <List>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </List>
+                <View>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </View>
+                <Edit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Edit>
+                <Insert>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Insert>
+                <QuickFilter>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </QuickFilter>
+                <FilterBuilder>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </FilterBuilder>
+                <Print>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Print>
+                <Export>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Export>
+                <Compare>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Compare>
+                <MultiEdit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </MultiEdit>
+              </Columns>
+              <Details/>
+              <RecordPermissions useRecordPermissions="false"/>
+              <PartitionNavigators/>
+            </Page>
+            <MasterForeignKeyColumnMap>
+              <FieldMap foreginColumnName="id_kontakt" masterColumnName="id"/>
+            </MasterForeignKeyColumnMap>
+          </Detail>
+          <Detail caption="Kontakt Firma">
+            <Page NavigatorPosition="3" addSeparator="false" caption="Kontakt Firma" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="kontakt_firma" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Kontakt Firma" showKeyColumnsImagesInGridHeader="false" tableName="kontakt_firma" type="table" useActionImages="true">
+              <BeforeGridText/>
+              <DetailedDescription/>
+              <ColumnPresentations>
+                <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+                  <ViewProperties type="text">
+                    <Format thousandSeparator="," type="number"/>
+                  </ViewProperties>
+                  <EditProperties maxLength="0" type="textBox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Firma" fieldName="id_firma" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="nazwa" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="firmy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+              </ColumnPresentations>
+              <Columns>
+                <List>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </List>
+                <View>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </View>
+                <Edit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </Edit>
+                <Insert>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </Insert>
+                <QuickFilter>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </QuickFilter>
+                <FilterBuilder>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </FilterBuilder>
+                <Print>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </Print>
+                <Export>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </Export>
+                <Compare>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </Compare>
+                <MultiEdit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_firma"/>
+                </MultiEdit>
+              </Columns>
+              <Details/>
+              <RecordPermissions useRecordPermissions="false"/>
+              <PartitionNavigators/>
+            </Page>
+            <MasterForeignKeyColumnMap>
+              <FieldMap foreginColumnName="id_kontakt" masterColumnName="id"/>
+            </MasterForeignKeyColumnMap>
+          </Detail>
+          <Detail caption="Umowa Uzytkownik Kontakt">
+            <Page NavigatorPosition="3" addSeparator="false" caption="Umowa Uzytkownik Kontakt" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="umowa_uzytkownik_kontakt" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Umowa Uzytkownik Kontakt" showKeyColumnsImagesInGridHeader="false" tableName="umowa_uzytkownik_kontakt" type="table" useActionImages="true">
+              <BeforeGridText/>
+              <DetailedDescription/>
+              <ColumnPresentations>
+                <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+                  <ViewProperties type="text">
+                    <Format thousandSeparator="," type="number"/>
+                  </ViewProperties>
+                  <EditProperties maxLength="0" type="textBox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Umowa" fieldName="id_umowa" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="czas" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="umowy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+              </ColumnPresentations>
+              <Columns>
+                <List>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </List>
+                <View>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </View>
+                <Edit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Edit>
+                <Insert>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Insert>
+                <QuickFilter>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </QuickFilter>
+                <FilterBuilder>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </FilterBuilder>
+                <Print>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Print>
+                <Export>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Export>
+                <Compare>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Compare>
+                <MultiEdit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </MultiEdit>
+              </Columns>
+              <Details/>
+              <RecordPermissions useRecordPermissions="false"/>
+              <PartitionNavigators/>
+            </Page>
+            <MasterForeignKeyColumnMap>
+              <FieldMap foreginColumnName="id_kontakt" masterColumnName="id"/>
+            </MasterForeignKeyColumnMap>
+          </Detail>
+        </Details>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page NavigatorPosition="3" addSeparator="false" caption="Kontakt Firma" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="kontakt_firma" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Kontakt-Firma" showKeyColumnsImagesInGridHeader="false" tableName="kontakt_firma" type="table" useActionImages="true">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+            <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties type="dynamicCombobox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Id Firma" fieldName="id_firma" selectedFilterOperators="1589247">
+            <Lookup displayFieldName="nazwa" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="firmy" useLookupOrdering="true"/>
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties type="dynamicCombobox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_firma"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_firma"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_firma"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_firma"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_firma"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_firma"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_firma"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_firma"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_firma"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_firma"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page NavigatorPosition="3" addSeparator="false" caption="Notatka Uzytkownik" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="notatka_uzytkownik" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Notatka-Użytkownik" showKeyColumnsImagesInGridHeader="false" tableName="notatka_uzytkownik" type="table" useActionImages="true">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Id Notatka" fieldName="id_notatka" selectedFilterOperators="1589247">
+            <Lookup displayFieldName="tytul" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="notatki" useLookupOrdering="true"/>
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties type="dynamicCombobox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+            <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties type="dynamicCombobox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="id_notatka"/>
+            <Column fieldName="id_uzytkownik"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="id_notatka"/>
+            <Column fieldName="id_uzytkownik"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_notatka"/>
+            <Column fieldName="id_uzytkownik"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_notatka"/>
+            <Column fieldName="id_uzytkownik"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="id_notatka"/>
+            <Column fieldName="id_uzytkownik"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="id_notatka"/>
+            <Column fieldName="id_uzytkownik"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="id_notatka"/>
+            <Column fieldName="id_uzytkownik"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="id_notatka"/>
+            <Column fieldName="id_uzytkownik"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_notatka"/>
+            <Column fieldName="id_uzytkownik"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_notatka"/>
+            <Column fieldName="id_uzytkownik"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page NavigatorPosition="3" addSeparator="false" caption="Notatki" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="notatki" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Notatki" showKeyColumnsImagesInGridHeader="false" tableName="notatki" type="table" useActionImages="true">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Tytul" fieldName="tytul" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Rodzaj" fieldName="rodzaj" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Czas" fieldName="czas" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Tresc" fieldName="tresc" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Foto" fieldName="foto" selectedFilterOperators="1572864">
+            <ViewProperties type="download"/>
+            <EditProperties type="fileUpload"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="tytul"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="tresc"/>
+            <Column fieldName="foto"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="tytul"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="tresc"/>
+            <Column fieldName="foto"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="tytul"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="tresc"/>
+            <Column fieldName="foto"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="tytul"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="tresc"/>
+            <Column fieldName="foto"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="tytul"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="tresc"/>
+            <Column fieldName="foto"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="tytul"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="tresc"/>
+            <Column fieldName="foto"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="tytul"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="tresc"/>
+            <Column fieldName="foto"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="tytul"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="tresc"/>
+            <Column fieldName="foto"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="tytul"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="tresc"/>
+            <Column fieldName="foto"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="tytul"/>
+            <Column fieldName="rodzaj"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="tresc"/>
+            <Column fieldName="foto"/>
+          </MultiEdit>
+        </Columns>
+        <Details>
+          <Detail caption="Notatka Uzytkownik">
+            <Page NavigatorPosition="3" addSeparator="false" caption="Notatka Uzytkownik" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="notatka_uzytkownik" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Notatka Uzytkownik" showKeyColumnsImagesInGridHeader="false" tableName="notatka_uzytkownik" type="table" useActionImages="true">
+              <BeforeGridText/>
+              <DetailedDescription/>
+              <ColumnPresentations>
+                <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+                  <ViewProperties type="text">
+                    <Format thousandSeparator="," type="number"/>
+                  </ViewProperties>
+                  <EditProperties maxLength="0" type="textBox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Notatka" fieldName="id_notatka" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="tytul" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="notatki" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+              </ColumnPresentations>
+              <Columns>
+                <List>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </List>
+                <View>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </View>
+                <Edit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </Edit>
+                <Insert>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </Insert>
+                <QuickFilter>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </QuickFilter>
+                <FilterBuilder>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </FilterBuilder>
+                <Print>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </Print>
+                <Export>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </Export>
+                <Compare>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </Compare>
+                <MultiEdit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </MultiEdit>
+              </Columns>
+              <Details/>
+              <RecordPermissions useRecordPermissions="false"/>
+              <PartitionNavigators/>
+            </Page>
+            <MasterForeignKeyColumnMap>
+              <FieldMap foreginColumnName="id_notatka" masterColumnName="id"/>
+            </MasterForeignKeyColumnMap>
+          </Detail>
+        </Details>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page NavigatorPosition="3" addSeparator="false" caption="Umowa Uzytkownik Kontakt" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="umowa_uzytkownik_kontakt" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Umowa-Użytkownik-Kontakt" showKeyColumnsImagesInGridHeader="false" tableName="umowa_uzytkownik_kontakt" type="table" useActionImages="true">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+            <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties type="dynamicCombobox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+            <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties type="dynamicCombobox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Id Umowa" fieldName="id_umowa" selectedFilterOperators="1589247">
+            <Lookup displayFieldName="czas" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="umowy" useLookupOrdering="true"/>
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties type="dynamicCombobox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_umowa"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_umowa"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_umowa"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_umowa"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_umowa"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_umowa"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_umowa"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_umowa"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_umowa"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="id_kontakt"/>
+            <Column fieldName="id_uzytkownik"/>
+            <Column fieldName="id_umowa"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page NavigatorPosition="3" addSeparator="false" caption="Umowy" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="umowy" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Umowy" showKeyColumnsImagesInGridHeader="false" tableName="umowy" type="table" useActionImages="true">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Fotografia" fieldName="fotografia" selectedFilterOperators="1572864">
+            <ViewProperties type="download"/>
+            <EditProperties type="fileUpload"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Czas" fieldName="czas" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Opis" fieldName="opis" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="fotografia"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="fotografia"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="fotografia"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="fotografia"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="fotografia"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="fotografia"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="fotografia"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="fotografia"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="fotografia"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="fotografia"/>
+            <Column fieldName="czas"/>
+            <Column fieldName="opis"/>
+          </MultiEdit>
+        </Columns>
+        <Details>
+          <Detail caption="Umowa Uzytkownik Kontakt">
+            <Page NavigatorPosition="3" addSeparator="false" caption="Umowa Uzytkownik Kontakt" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="umowa_uzytkownik_kontakt" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Umowa Uzytkownik Kontakt" showKeyColumnsImagesInGridHeader="false" tableName="umowa_uzytkownik_kontakt" type="table" useActionImages="true">
+              <BeforeGridText/>
+              <DetailedDescription/>
+              <ColumnPresentations>
+                <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+                  <ViewProperties type="text">
+                    <Format thousandSeparator="," type="number"/>
+                  </ViewProperties>
+                  <EditProperties maxLength="0" type="textBox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Umowa" fieldName="id_umowa" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="czas" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="umowy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+              </ColumnPresentations>
+              <Columns>
+                <List>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </List>
+                <View>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </View>
+                <Edit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Edit>
+                <Insert>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Insert>
+                <QuickFilter>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </QuickFilter>
+                <FilterBuilder>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </FilterBuilder>
+                <Print>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Print>
+                <Export>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Export>
+                <Compare>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Compare>
+                <MultiEdit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </MultiEdit>
+              </Columns>
+              <Details/>
+              <RecordPermissions useRecordPermissions="false"/>
+              <PartitionNavigators/>
+            </Page>
+            <MasterForeignKeyColumnMap>
+              <FieldMap foreginColumnName="id_umowa" masterColumnName="id"/>
+            </MasterForeignKeyColumnMap>
+          </Detail>
+        </Details>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page NavigatorPosition="3" addSeparator="false" caption="Uzytkownicy" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="uzytkownicy" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Użytkownicy" showKeyColumnsImagesInGridHeader="false" tableName="uzytkownicy" type="table" useActionImages="true">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Email" fieldName="email" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Haslo" fieldName="haslo" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Imie" fieldName="imie" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Nazwisko" fieldName="nazwisko" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Data Dodania" fieldName="data_dodania" selectedFilterOperators="1589247" showColumnFilter="false">
+            <ViewProperties maxLength="75" type="text"/>
+            <EditProperties columnCount="50" placeholder="" rowCount="8" type="textArea"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Aktywny" fieldName="aktywny" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation caption="Uprawnienia" fieldName="uprawnienia" selectedFilterOperators="1573119" showColumnFilter="false">
+            <ViewProperties type="text">
+              <Format thousandSeparator="," type="number"/>
+            </ViewProperties>
+            <EditProperties maxLength="0" type="textBox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="id"/>
+            <Column fieldName="email"/>
+            <Column fieldName="haslo"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="data_dodania"/>
+            <Column fieldName="aktywny"/>
+            <Column fieldName="uprawnienia"/>
+          </List>
+          <View>
+            <Column fieldName="id"/>
+            <Column fieldName="email"/>
+            <Column fieldName="haslo"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="data_dodania"/>
+            <Column fieldName="aktywny"/>
+            <Column fieldName="uprawnienia"/>
+          </View>
+          <Edit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="email"/>
+            <Column fieldName="haslo"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="data_dodania"/>
+            <Column fieldName="aktywny"/>
+            <Column fieldName="uprawnienia"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="email"/>
+            <Column fieldName="haslo"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="data_dodania"/>
+            <Column fieldName="aktywny"/>
+            <Column fieldName="uprawnienia"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="id"/>
+            <Column fieldName="email"/>
+            <Column fieldName="haslo"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="data_dodania"/>
+            <Column fieldName="aktywny"/>
+            <Column fieldName="uprawnienia"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="id"/>
+            <Column fieldName="email"/>
+            <Column fieldName="haslo"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="data_dodania"/>
+            <Column fieldName="aktywny"/>
+            <Column fieldName="uprawnienia"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="id"/>
+            <Column fieldName="email"/>
+            <Column fieldName="haslo"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="data_dodania"/>
+            <Column fieldName="aktywny"/>
+            <Column fieldName="uprawnienia"/>
+          </Print>
+          <Export>
+            <Column fieldName="id"/>
+            <Column fieldName="email"/>
+            <Column fieldName="haslo"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="data_dodania"/>
+            <Column fieldName="aktywny"/>
+            <Column fieldName="uprawnienia"/>
+          </Export>
+          <Compare>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="email"/>
+            <Column fieldName="haslo"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="data_dodania"/>
+            <Column fieldName="aktywny"/>
+            <Column fieldName="uprawnienia"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="id" visible="false"/>
+            <Column fieldName="email"/>
+            <Column fieldName="haslo"/>
+            <Column fieldName="imie"/>
+            <Column fieldName="nazwisko"/>
+            <Column fieldName="data_dodania"/>
+            <Column fieldName="aktywny"/>
+            <Column fieldName="uprawnienia"/>
+          </MultiEdit>
+        </Columns>
+        <Details>
+          <Detail caption="Dzialanie Uzytkownik Kontakt">
+            <Page NavigatorPosition="3" addSeparator="false" caption="Dzialanie Uzytkownik Kontakt" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="dzialanie_uzytkownik_kontakt" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Dzialanie Uzytkownik Kontakt" showKeyColumnsImagesInGridHeader="false" tableName="dzialanie_uzytkownik_kontakt" type="table" useActionImages="true">
+              <BeforeGridText/>
+              <DetailedDescription/>
+              <ColumnPresentations>
+                <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+                  <ViewProperties type="text">
+                    <Format thousandSeparator="," type="number"/>
+                  </ViewProperties>
+                  <EditProperties maxLength="0" type="textBox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Dzialanie" fieldName="id_dzialanie" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="rodzaj" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="dzialania" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+              </ColumnPresentations>
+              <Columns>
+                <List>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </List>
+                <View>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </View>
+                <Edit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Edit>
+                <Insert>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Insert>
+                <QuickFilter>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </QuickFilter>
+                <FilterBuilder>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </FilterBuilder>
+                <Print>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Print>
+                <Export>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Export>
+                <Compare>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </Compare>
+                <MultiEdit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_dzialanie"/>
+                </MultiEdit>
+              </Columns>
+              <Details/>
+              <RecordPermissions useRecordPermissions="false"/>
+              <PartitionNavigators/>
+            </Page>
+            <MasterForeignKeyColumnMap>
+              <FieldMap foreginColumnName="id_uzytkownik" masterColumnName="id"/>
+            </MasterForeignKeyColumnMap>
+          </Detail>
+          <Detail caption="Notatka Uzytkownik">
+            <Page NavigatorPosition="3" addSeparator="false" caption="Notatka Uzytkownik" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="notatka_uzytkownik" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Notatka Uzytkownik" showKeyColumnsImagesInGridHeader="false" tableName="notatka_uzytkownik" type="table" useActionImages="true">
+              <BeforeGridText/>
+              <DetailedDescription/>
+              <ColumnPresentations>
+                <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+                  <ViewProperties type="text">
+                    <Format thousandSeparator="," type="number"/>
+                  </ViewProperties>
+                  <EditProperties maxLength="0" type="textBox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Notatka" fieldName="id_notatka" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="tytul" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="notatki" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+              </ColumnPresentations>
+              <Columns>
+                <List>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </List>
+                <View>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </View>
+                <Edit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </Edit>
+                <Insert>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </Insert>
+                <QuickFilter>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </QuickFilter>
+                <FilterBuilder>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </FilterBuilder>
+                <Print>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </Print>
+                <Export>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </Export>
+                <Compare>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </Compare>
+                <MultiEdit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_notatka"/>
+                  <Column fieldName="id_uzytkownik"/>
+                </MultiEdit>
+              </Columns>
+              <Details/>
+              <RecordPermissions useRecordPermissions="false"/>
+              <PartitionNavigators/>
+            </Page>
+            <MasterForeignKeyColumnMap>
+              <FieldMap foreginColumnName="id_uzytkownik" masterColumnName="id"/>
+            </MasterForeignKeyColumnMap>
+          </Detail>
+          <Detail caption="Umowa Uzytkownik Kontakt">
+            <Page NavigatorPosition="3" addSeparator="false" caption="Umowa Uzytkownik Kontakt" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" fileName="umowa_uzytkownik_kontakt" horizontalFilterCondition="" insertAbilityMode="1" numberByDataSource="0" printAvailable="13" recordsPerPage="20" shortCaption="Umowa Uzytkownik Kontakt" showKeyColumnsImagesInGridHeader="false" tableName="umowa_uzytkownik_kontakt" type="table" useActionImages="true">
+              <BeforeGridText/>
+              <DetailedDescription/>
+              <ColumnPresentations>
+                <ColumnPresentation caption="Id" fieldName="id" selectedFilterOperators="1573119" showColumnFilter="false">
+                  <ViewProperties type="text">
+                    <Format thousandSeparator="," type="number"/>
+                  </ViewProperties>
+                  <EditProperties maxLength="0" type="textBox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Kontakt" fieldName="id_kontakt" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="imie" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="kontakty" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Uzytkownik" fieldName="id_uzytkownik" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="email" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="uzytkownicy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+                <ColumnPresentation caption="Id Umowa" fieldName="id_umowa" selectedFilterOperators="1589247">
+                  <Lookup displayFieldName="czas" linkFieldName="id" lookupFilter="" lookupOrdering="0" tableName="umowy" useLookupOrdering="true"/>
+                  <ViewProperties maxLength="75" type="text"/>
+                  <EditProperties type="dynamicCombobox"/>
+                </ColumnPresentation>
+              </ColumnPresentations>
+              <Columns>
+                <List>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </List>
+                <View>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </View>
+                <Edit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Edit>
+                <Insert>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Insert>
+                <QuickFilter>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </QuickFilter>
+                <FilterBuilder>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </FilterBuilder>
+                <Print>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Print>
+                <Export>
+                  <Column fieldName="id"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Export>
+                <Compare>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </Compare>
+                <MultiEdit>
+                  <Column fieldName="id" visible="false"/>
+                  <Column fieldName="id_kontakt"/>
+                  <Column fieldName="id_uzytkownik"/>
+                  <Column fieldName="id_umowa"/>
+                </MultiEdit>
+              </Columns>
+              <Details/>
+              <RecordPermissions useRecordPermissions="false"/>
+              <PartitionNavigators/>
+            </Page>
+            <MasterForeignKeyColumnMap>
+              <FieldMap foreginColumnName="id_uzytkownik" masterColumnName="id"/>
+            </MasterForeignKeyColumnMap>
+          </Detail>
+        </Details>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+    </Pages>
+    <UserAuthorization/>
+    <UserGrants/>
+    <Header/>
+    <Footer/>
+    <PHPOptions/>
+    <Groups>
+      <Group caption="No group"/>
+    </Groups>
+    <outgoingMailSettings fromEmail="" fromName="" mailer="0"/>
+  </Presentation>
+  <UserCSS/>
+  <UserJS/>
+  <ExcludedPaths/>
+  <DefaultPageProperties NavigatorPosition="3" contentEncoding="UTF-8" deleteAbilityMode="3" deleteSelectedAbilityMode="3" exportAllRecordsAvailable="31" exportRecordFromViewFormAvailable="31" exportSelectedRecordsAvailable="31" exportSingleRecordFromGridAvailable="0" insertAbilityMode="1" printAvailable="13" recordsPerPage="20" showKeyColumnsImagesInGridHeader="false" useActionImages="true"/>
+  <DefaultDataFormats DateFormat="Y-m-d" DateTimeFormat="Y-m-d H:i:s" DecimalSeparator="." ThousandSeparator="," firstDayOfWeek="0" numberAfterDecimal="4"/>
+  <ConnectionOptions host="localhost" port="3306" login="root" password="" database="plax_crm" client_encoding="utf8" allow_old_password="false">
+    <ssh_secure secure="false" port="22" authentication_mode="0"/>
+    <http_tunnel tunneling="false" url="">
+      <http_proxy_server use_proxy="false" port="8080"/>
+      <http_authentication/>
+    </http_tunnel>
+  </ConnectionOptions>
+  <ScriptConnectionOptions host="localhost" port="3306" login="p529437_root" password="[/WK[*FJJZRM" database="p529437_plax_crm" client_encoding="utf8" allow_old_password="false">
+    <ssh_secure secure="false" port="22" authentication_mode="0"/>
+    <http_tunnel tunneling="false" url="">
+      <http_proxy_server use_proxy="false" port="8080"/>
+      <http_authentication/>
+    </http_tunnel>
+  </ScriptConnectionOptions>
+  <Queries/>
+</Project>
