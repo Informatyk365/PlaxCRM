@@ -55,7 +55,32 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.michaloziero.plaxcrm.MainActivity" />
         </activity>
-        <activity android:name=".EdycjaNotatkiActivity"></activity>
+        <activity android:name=".EdycjaNotatkiActivity" />
+        <activity android:name=".DodajNotatkiActivity" />
+        <activity
+            android:name=".FirmyActivity"
+            android:label="@string/title_activity_firmy"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michaloziero.plaxcrm.MainActivity" />
+        </activity>
+        <activity android:name=".DodajFirmyActivity" />
+        <activity android:name=".EdycjaFirmyActivity" />
+        <activity
+            android:name=".UmowyActivity"
+            android:label="@string/title_activity_umowy"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michaloziero.plaxcrm.MainActivity" />
+        </activity>
+        <activity android:name=".DodajUmowyActivity" />
+        <activity android:name=".EdycjaUmowyActivity" />
+        <activity android:name=".UzytkownikActivity" />
+        <activity android:name=".StatystykiActivity"></activity>
     </application>
 
 </manifest>
