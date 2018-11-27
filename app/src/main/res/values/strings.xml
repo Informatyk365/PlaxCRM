@@ -18,5 +18,10 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_kontakty">KontaktyActivity</string>
+    <string name="title_activity_kontakty">Twoje kontakty</string>
+    <string name="title_activity_firmy">Twoje firmy</string>
+    <string name="title_activity_dzialania">Twoje działania</string>
+    <string name="title_activity_notatki">Twoje notatki</string>
+    <string name="title_activity_umowy">Twoje umowy</string>
+    <string name="title_activity_uzytkownik">Twoje dane użytkownika</string>
 </resources>

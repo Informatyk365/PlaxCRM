@@ -460,12 +460,15 @@ public class LogowanieActivity extends AppCompatActivity implements View.OnClick
             builder1.setTitle("Uwaga!");
             builder1.setMessage(savemsg);
             builder1.setCancelable(false);
-            builder1.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.cancel();
-                }
-            }).create().show();
+            //builder1.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+               // @Override
+               // public void onClick(DialogInterface dialog, int which) {
+            //        dialog.cancel();
+            //    }
+            //}).create().show();
+            Intent i=new Intent(this,MainActivity.class);
+            this.finish();
+            startActivity(i);
         }
 
     }//end loginVerification

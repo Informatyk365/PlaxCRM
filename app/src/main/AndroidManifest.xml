@@ -25,10 +25,57 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:label="Witaj w Plax CRM!"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="Witaj w Plax CRM!" />
         <activity
             android:name=".KontaktyActivity"
             android:label="@string/title_activity_kontakty"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michaloziero.plaxcrm.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FirmyActivity"
+            android:label="@string/title_activity_firmy"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michaloziero.plaxcrm.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DzialaniaActivity"
+            android:label="@string/title_activity_dzialania"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michaloziero.plaxcrm.MainActivity" />
+        </activity>
+        <activity
+            android:name=".NotatkiActivity"
+            android:label="@string/title_activity_notatki"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michaloziero.plaxcrm.MainActivity" />
+        </activity>
+        <activity
+            android:name=".UmowyActivity"
+            android:label="@string/title_activity_umowy"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michaloziero.plaxcrm.MainActivity" />
+        </activity>
+        <activity
+            android:name=".UzytkownikActivity"
+            android:label="@string/title_activity_uzytkownik"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
