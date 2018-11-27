@@ -24,4 +24,6 @@
     <string name="title_activity_notatki">Twoje notatki</string>
     <string name="title_activity_umowy">Twoje umowy</string>
     <string name="title_activity_uzytkownik">Twoje dane użytkownika</string>
+    <string name="title_activity_dodaj_kontakt">Dodaj kontakt</string>
+    <string name="title_activity_edytuj_kontakt">Edytuj kontakt</string>
 </resources>

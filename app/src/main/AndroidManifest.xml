@@ -82,6 +82,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.michaloziero.plaxcrm.MainActivity" />
         </activity>
+        <activity
+            android:name=".DodajKontaktActivity"
+            android:label="@string/title_activity_dodaj_kontakt"
+            android:parentActivityName=".KontaktyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michaloziero.plaxcrm.KontaktyActivity" />
+        </activity>
+        <activity
+            android:name=".EdytujKontaktActivity"
+            android:label="@string/title_activity_edytuj_kontakt"
+            android:parentActivityName=".KontaktyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michaloziero.plaxcrm.KontaktyActivity" />
+        </activity>
     </application>
 
 </manifest>
