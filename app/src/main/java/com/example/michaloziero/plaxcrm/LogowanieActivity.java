@@ -107,15 +107,15 @@ public class LogowanieActivity extends AppCompatActivity implements View.OnClick
         });
 
 
-
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
-        btnlogin=(Button)findViewById(R.id.btnlogin);
+        btnlogin = (Button) findViewById(R.id.btnlogin);
         btnlogin.setOnClickListener(this);
     }
+
     public void onClick(View view) {//for btnlogin
-        username=mEmailView.getText().toString();
-        password=mPasswordView.getText().toString();
+        username = mEmailView.getText().toString();
+        password = mPasswordView.getText().toString();
         new UserLoginTask(username, password).execute();
     }
 
@@ -331,7 +331,7 @@ public class LogowanieActivity extends AppCompatActivity implements View.OnClick
         }
 
         @Override
-        protected void onPreExecute(){
+        protected void onPreExecute() {
             showProgress(true);
         }//onPreExecute
 
@@ -348,8 +348,8 @@ public class LogowanieActivity extends AppCompatActivity implements View.OnClick
                 postDataParams.put("username", username);
                 postDataParams.put("password", password);
 
-                Log.e("params",postDataParams.toString());
-                Log.e("URL",url.toString());
+                Log.e("params", postDataParams.toString());
+                Log.e("URL", url.toString());
 
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(15000 /* milliseconds */);
@@ -368,35 +368,33 @@ public class LogowanieActivity extends AppCompatActivity implements View.OnClick
                 writer.close();
                 os.close();
 
-                int responseCode=conn.getResponseCode();
-                Log.e("responseCode", "responseCode "+responseCode);
+                int responseCode = conn.getResponseCode();
+                Log.e("responseCode", "responseCode " + responseCode);
                 if (responseCode == HttpsURLConnection.HTTP_OK) {//code 200 connection OK
                     //this part is to capture the server response
-                    BufferedReader in=new BufferedReader(new
+                    BufferedReader in = new BufferedReader(new
                             InputStreamReader(
                             conn.getInputStream()));
                     //Log.e("response",conn.getInputStream().toString());
 
                     StringBuffer sb = new StringBuffer("");
-                    String line="";
+                    String line = "";
 
-                    do{
+                    do {
                         sb.append(line);
-                        Log.e("MSG sb",sb.toString());
-                    }while ((line = in.readLine()) != null) ;
+                        Log.e("MSG sb", sb.toString());
+                    } while ((line = in.readLine()) != null);
 
                     in.close();
-                    Log.e("response",conn.getInputStream().toString());
-                    Log.e("textmessage",sb.toString());
+                    Log.e("response", conn.getInputStream().toString());
+                    Log.e("textmessage", sb.toString());
                     return sb.toString();//server response message
 
-                }
-                else {
+                } else {
 
-                    return new String("false : "+responseCode);
+                    return new String("false : " + responseCode);
                 }
-            }
-            catch(Exception e){
+            } catch (Exception e) {
                 //error on connection
                 return new String("Exception: " + e.getMessage());
             }
@@ -422,6 +420,7 @@ public class LogowanieActivity extends AppCompatActivity implements View.OnClick
             showProgress(false);
         }//end onCancelled
     }
+
     public String getPostDataString(JSONObject params) throws Exception {
 
         StringBuilder result = new StringBuilder();
@@ -429,8 +428,8 @@ public class LogowanieActivity extends AppCompatActivity implements View.OnClick
 
         Iterator<String> itr = params.keys();
 
-        while(itr.hasNext()){
-            String key= itr.next();
+        while (itr.hasNext()) {
+            String key = itr.next();
             Object value = params.get(key);
 
             if (first)
@@ -447,80 +446,31 @@ public class LogowanieActivity extends AppCompatActivity implements View.OnClick
         return result.toString();
     }//end UserLoginTask
 
-    private void loginVerification(String svrmsg){
-        String savemsg="";
-        if (svrmsg.equals("success")){
-            Toast.makeText(this, "Zalogowano pomyślnie!",Toast.LENGTH_LONG).show();
-            Intent i=new Intent(this,MainActivity.class);
+    private void loginVerification(String svrmsg) {
+        String savemsg = "";
+        if (svrmsg.equals("success")) {
+            Toast.makeText(this, "Zalogowano pomyślnie!", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this, MainActivity.class);
             this.finish();
             startActivity(i);
-        }else{
-            savemsg="Adres e-mail lub hasło są nieprawidłowe!";
+        } else {
+            savemsg = "Adres e-mail lub hasło są nieprawidłowe!";
             AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
             builder1.setTitle("Uwaga!");
             builder1.setMessage(savemsg);
             builder1.setCancelable(false);
             //builder1.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-               // @Override
-               // public void onClick(DialogInterface dialog, int which) {
+            // @Override
+            // public void onClick(DialogInterface dialog, int which) {
             //        dialog.cancel();
             //    }
             //}).create().show();
-            Intent i=new Intent(this,MainActivity.class);
+            Intent i = new Intent(this, MainActivity.class);
             this.finish();
             startActivity(i);
         }
 
     }//end loginVerification
 
-    public static class HttpHandler {
-
-        private static final String TAG = HttpHandler.class.getSimpleName();
-
-        public HttpHandler() {
-        }
-
-        public String makeServiceCall(String reqUrl) {
-            String response = null;
-            try {
-                URL url = new URL(reqUrl);
-                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                conn.setRequestMethod("GET");//method type
-                // read the response
-                InputStream in = new BufferedInputStream(conn.getInputStream());
-                response = convertStreamToString(in);
-            } catch (MalformedURLException e) {
-                Log.e(TAG, "MalformedURLException: " + e.getMessage());
-            } catch (ProtocolException e) {
-                Log.e(TAG, "ProtocolException: " + e.getMessage());
-            } catch (IOException e) {
-                Log.e(TAG, "IOException: " + e.getMessage());
-            } catch (Exception e) {
-                Log.e(TAG, "Exception: " + e.getMessage());
-            }
-            return response;
-        }
-
-        private String convertStreamToString(InputStream is) {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            StringBuilder sb = new StringBuilder();
-
-            String line;
-            try {
-                while ((line = reader.readLine()) != null) {
-                    sb.append(line).append('\n');
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    is.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            return sb.toString();
-        }
-    }
 }
 

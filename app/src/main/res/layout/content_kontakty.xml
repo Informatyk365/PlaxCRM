@@ -8,4 +8,5 @@
     tools:context=".KontaktyActivity"
     tools:showIn="@layout/activity_kontakty">
 
+
 </android.support.constraint.ConstraintLayout>
